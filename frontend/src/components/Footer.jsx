@@ -3,9 +3,10 @@ const Footer = () => {
     return (
         <>
             <footer>
-                <div className='footer'>
+                
+                <div className='footer' >
                     <h4 className='sub-headings'>Elevate Academy</h4>
-                    <p>Empowering learners of all ages to acquire essential skills for personal and professional growth.</p>
+                    <p className='sub-para'>Empowering learners of all ages to acquire essential skills for personal and professional growth.</p>
                 </div>
                 <div>
                     <h4 className='sub-headings' >Quick Links</h4>

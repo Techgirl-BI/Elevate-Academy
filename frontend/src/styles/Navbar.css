@@ -1,84 +1,98 @@
-.nav-items {
-  position: relative;
-  top: -20px;
-  left: 1100px;
-  padding: 0 20px;
-  font-size: 17px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: #1E40AF;
-  font-weight: bolder;
-  position: relative;
-  top: 20px;
-  left: 23rem;
+  font-weight: bold;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-items {
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-items:hover {
+  background-color: #f0f0f0;
+}
+
+.nav-items.active {
+  background-color: #6366F1;
+  color: white;
 }
 
 .get-started-btn {
   background-color: #3B82F6;
   color: white;
-  border: #3B82F6;
+  border: none;
   border-radius: 10px;
-  padding: 12px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-header {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  background-color: white;
+.get-started-btn:hover {
+  background-color: #2563EB;
 }
 
-.active {
-  background-color: #6366F1;
-  color: white;
-  padding: 20px;
+.hamburger {
+  display: none;
+  cursor: pointer;
 }
 
-.nav-bar .icon {
-  display: flex;
-}
-
-.nav-bar a:hover {
-  background-color: #555;
-  color: white;
-  padding: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.menu {
-  display: flex;
-}
-
-@media screen and (max-width: 375px) {
-  .nav-bar a {
+@media screen and (max-width: 768px) {
+  .nav-bar {
     display: none;
   }
 
   .hamburger {
     display: block;
-    position: absolute;
-    top: 35px;
-    left: 300px;
-    
   }
+
+  .nav-container {
+    position: relative;
+  }
+
   .menu {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
     flex-direction: column;
-    position: relative;
-    left: 700px;
-    top: -100px;
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu.show {
+    display: flex;
   }
 
   .menu a {
-    margin-bottom: 20px;
-  }
-  .logo {
-    font-size: 25px;
-    color: #1E40AF;
-    font-weight: bolder;
-    position: relative;
-    top: 20px;
-    left: 1rem;
+    padding: 0.75rem;
+    text-align: center;
   }
 }

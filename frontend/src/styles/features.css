@@ -1,19 +1,86 @@
-.features{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 1rem;
+    background-color: #f9fafb;
+  }
+  
+  .what-we-offer {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #1E40AF;
+    margin-bottom: 3rem;
     text-align: center;
-    position: relative;
-    margin-top: 100px;
-}
-.what-we-offer{
-    font-size: 2.5rem;
-}
-.icon{
+  }
+  
+  .features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+  }
+  
+  .features_tiles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 350px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .features_tiles:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .icon {
     font-size: 3rem;
-    padding-top: 60px;
-    color: blue;
-}
-.course {
-    font: 10px;
-}
-.description {
-    font: 10px;
-}
+    color: #3B82F6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .course {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1E40AF;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .features {
+      padding: 2rem 1rem;
+    }
+  
+    .what-we-offer {
+      margin-bottom: 2rem;
+    }
+  
+    .features-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .features_tiles {
+      width: 100%;
+      max-width: 350px;
+      margin-bottom: 1.5rem;
+    }
+  }

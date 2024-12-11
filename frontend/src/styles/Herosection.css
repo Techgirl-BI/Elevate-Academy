@@ -1,48 +1,84 @@
-.hero-section {
-    position: relative;
-    left: 15rem;
-}
-
-.tagline {
-    font-size: 3rem;
-    padding-top: 24px;
-    font-weight: 900;
-}
-
-.slogan {
-    font-size: 1.3rem;
-}
-
-.cta-btns {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .hero-section {
     display: flex;
-    flex-direction: row; 
-    gap: 10px; 
-    justify-content: center; 
-    align-items: center; 
-    width: 100%; 
-}
-
-
-
-@media screen and (max-width: 375px) {
-    .tagline {
-        font-size: 3rem;
-        font-weight: 900;
-        position: relative;
-        left: -220px;
-        width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .tagline {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: #1E40AF;
+    margin-bottom: 1rem;
+  }
+  
+  .slogan {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    color: #555;
+    max-width: 600px;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .cta {
+    background-color: #1E95E6;
+    color: white;
+    border: 2px solid #87C6F0;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta:hover {
+    background-color: #1C95E6;
+  }
+  
+  .cta2 {
+    background-color: white;
+    color: #1E95E6;
+    border: 2px solid #4DA0C7;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta2:hover {
+    background-color: #F0F0F0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hero-section {
+      padding: 2rem 1rem;
     }
-
-    .slogan {
-        position: relative;
-        left: -220px;
-        color: rgb(85, 83, 83);
-        font-size: 1rem;
-    }
+  
     .cta-btns {
-        position: relative;
-        left: -250px;
+      flex-direction: column;
+      width: 100%;
     }
-
-    
-}
+  
+    .cta, .cta2 {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
