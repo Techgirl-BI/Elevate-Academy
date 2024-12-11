@@ -1,31 +1,49 @@
-import '../styles/footer.css'
+import React from 'react';
+import { FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa';
+import '../styles/footer.css';
+
 const Footer = () => {
     return (
-        <>
-            <footer>
-                
-                <div className='footer' >
+        <footer>
+            <div className="footer-container">
+                <div className="footer-section">
                     <h4 className='sub-headings'>Elevate Academy</h4>
-                    <p className='sub-para'>Empowering learners of all ages to acquire essential skills for personal and professional growth.</p>
+                    <p className='sub-para'>
+                        Empowering learners of all ages to acquire essential skills 
+                        for personal and professional growth.
+                    </p>
                 </div>
-                <div>
-                    <h4 className='sub-headings' >Quick Links</h4>
-                    <ul>
-                        <li className='footer-nav'>Courses</li>
-                        <li className='footer-nav'>About Us</li>
-                        <li className='footer-nav'>Contact</li>
+                
+                <div className="footer-section">
+                    <h4 className='sub-headings'>Quick Links</h4>
+                    <ul className="footer-links-list">
+                        <li><a href="#" className='footer-nav'>Courses</a></li>
+                        <li><a href="#" className='footer-nav'>About Us</a></li>
+                        <li><a href="#" className='footer-nav'>Contact</a></li>
                     </ul>
+                </div>
+                
+                <div className="footer-section">
+                    <h4 className='sub-headings'>Connect With Us</h4>
+                    <div className="social-links">
+                        <a href="#" className='footer-links'>
+                            <FaLinkedin /> LinkedIn
+                        </a>
+                        <a href="#" className='footer-links'>
+                            <FaTwitter /> Twitter
+                        </a>
+                        <a href="#" className='footer-links'>
+                            <FaFacebook /> Facebook
+                        </a>
                     </div>
-                    <div>
-                    <h4 className='sub-headings' >Connect With Us</h4>
-                    <ul>
-                        <a className='footer-links'>linkedIn</a>
-                        <a className='footer-links'>Twitter</a>
-                        <a className='footer-links'>Facebook</a>
-                    </ul>
                 </div>
-            </footer>
-        </>
-    )
+            </div>
+            
+            <div className="copyright">
+                © 2024 Elevate Academy. All Rights Reserved.
+            </div>
+        </footer>
+    );
 }
-export default Footer
+
+export default Footer;

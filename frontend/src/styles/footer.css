@@ -1,36 +1,91 @@
-footer{
-    background-color:#27303b ;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  footer {
+    background-color: #27303b;
     color: whitesmoke;
-   padding-left: 300px;
-    padding-top: 30px;
-    margin-top: 70px;
-   padding-bottom: 30px;
-   
-}
-.sub-headings{
-    margin-top: 50px;
-    position: relative;
-    left: -250px;
-    width: 200px;
-   font-size: 1.2rem;
-}
-.footer-links{
-   padding-right: 30px;
-}
-.footer-nav{
-    margin-top: 20px;
-    position: relative;
-    left: -250px;
-    width: 200px;
-}
-.sub-para{
-    position: relative;
-    left: -250px;
-    width: 200px;
-}
-
-.footer-links {
-    position: relative;
-    left: -290px;
-    width: 200px;
-}
+    padding: 3rem 1rem;
+    margin-top: 4rem;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .sub-headings {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #f0f0f0;
+  }
+  
+  .sub-para {
+    color: #d1d5db;
+    line-height: 1.6;
+    max-width: 300px;
+  }
+  
+  .footer-links-list {
+    list-style: none;
+  }
+  
+  .footer-nav, .footer-links {
+    color: #d1d5db;
+    text-decoration: none;
+    margin-bottom: 0.75rem;
+    display: block;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-nav:hover, .footer-links:hover {
+    color: #3b82f6;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .footer-links {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .copyright {
+    text-align: center;
+    margin-top: 2rem;
+    color: #9ca3af;
+    font-size: 0.9rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-section {
+      margin-bottom: 1.5rem;
+    }
+  
+    .sub-para, .footer-links-list {
+      margin: 0 auto;
+    }
+  
+    .social-links {
+      justify-content: center;
+    }
+  }
