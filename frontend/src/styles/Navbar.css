@@ -1,0 +1,84 @@
+.nav-items {
+  position: relative;
+  top: -20px;
+  left: 1100px;
+  padding: 0 20px;
+  font-size: 17px;
+}
+
+.logo {
+  font-size: 1.6rem;
+  color: #1E40AF;
+  font-weight: bolder;
+  position: relative;
+  top: 20px;
+  left: 23rem;
+}
+
+.get-started-btn {
+  background-color: #3B82F6;
+  color: white;
+  border: #3B82F6;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+header {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.active {
+  background-color: #6366F1;
+  color: white;
+  padding: 20px;
+}
+
+.nav-bar .icon {
+  display: flex;
+}
+
+.nav-bar a:hover {
+  background-color: #555;
+  color: white;
+  padding: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.menu {
+  display: flex;
+}
+
+@media screen and (max-width: 375px) {
+  .nav-bar a {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 35px;
+    left: 300px;
+    
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    left: 700px;
+    top: -100px;
+  }
+
+  .menu a {
+    margin-bottom: 20px;
+  }
+  .logo {
+    font-size: 25px;
+    color: #1E40AF;
+    font-weight: bolder;
+    position: relative;
+    top: 20px;
+    left: 1rem;
+  }
+}

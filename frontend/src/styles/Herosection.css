@@ -1,0 +1,48 @@
+.hero-section {
+    position: relative;
+    left: 15rem;
+}
+
+.tagline {
+    font-size: 3rem;
+    padding-top: 24px;
+    font-weight: 900;
+}
+
+.slogan {
+    font-size: 1.3rem;
+}
+
+.cta-btns {
+    display: flex;
+    flex-direction: row; 
+    gap: 10px; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+}
+
+
+
+@media screen and (max-width: 375px) {
+    .tagline {
+        font-size: 3rem;
+        font-weight: 900;
+        position: relative;
+        left: -220px;
+        width: 100%;
+    }
+
+    .slogan {
+        position: relative;
+        left: -220px;
+        color: rgb(85, 83, 83);
+        font-size: 1rem;
+    }
+    .cta-btns {
+        position: relative;
+        left: -250px;
+    }
+
+    
+}
