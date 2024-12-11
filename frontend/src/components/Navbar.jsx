@@ -9,27 +9,45 @@ const Navbar = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const navLinks = [
+        { label: 'Home', active: true },
+        { label: 'Courses', active: false },
+        { label: 'About', active: false },
+        { label: 'Contact', active: false }
+    ];
+
     return (
         <div className="nav-container">
             <div className="logo">Elevate Academy</div>
             
+            {/* Desktop Navigation */}
             <nav className="nav-bar">
-                <a className="nav-items active">Home</a>
-                <a className="nav-items">Courses</a>
-                <a className="nav-items">About</a>
-                <a className="nav-items">Contact</a>
+                {navLinks.map((link, index) => (
+                    <a 
+                        key={index} 
+                        className={`nav-items ${link.active ? 'active' : ''}`}
+                    >
+                        {link.label}
+                    </a>
+                ))}
                 <button className="get-started-btn">Get Started</button>
             </nav>
-            
+
+            {/* Mobile Menu Toggle */}
             <div className="hamburger" onClick={toggleMenu}>
                 {isMenuOpen ? <FiX /> : <FiMenu />}
             </div>
-            
-            <nav className={`menu ${isMenuOpen ? 'show' : ''}`}>
-                <a className="nav-items active">Home</a>
-                <a className="nav-items">Courses</a>
-                <a className="nav-items">About</a>
-                <a className="nav-items">Contact</a>
+
+            {/* Mobile Navigation */}
+            <nav className={`mobile-menu ${isMenuOpen ? 'show' : ''}`}>
+                {navLinks.map((link, index) => (
+                    <a 
+                        key={index} 
+                        className={`nav-items ${link.active ? 'active' : ''}`}
+                    >
+                        {link.label}
+                    </a>
+                ))}
                 <button className="get-started-btn">Get Started</button>
             </nav>
         </div>
